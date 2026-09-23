@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head> <!--AQUI VIENE LOS METADATOS Y LA CONEXION al style.css-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Kylie Rodriguez">
+<meta name="description" content="Es un diseño de carrito de compras para maquillaje y skincare">
+<meta name="keywords" content="maquillaje, beauty, skincare">
+<!--Es el titulo de la pagina web-->
+<title> Carrito de compras - Rhode </title>
+<!--Enlaza con la hoja de estilos-->
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+
+
+
+</head>
+<body class="paper-texture">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--ENCABEZADO-->
+
+<header class="site-header">
+    <div class="container header-inner">
+ <a href="#inicio" class="logo">
+        <!--<span class="logo-icon">✨</span>-->
+        <img src="img/logo.png" alt="logo">
+      
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Ofertas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Rhode')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+<nav id="mobile-menu" class="mobile-nav">
+    <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Ofertas</a></li>
+          <li><a href="#contacto">Acerca de Rhode</a></li>
+        </ul>
+ <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Rhode')">
+        <i data-lucide="message-circle"></i> Pedir ahora
+      </button>
+
+</nav>
+
+       
+</header>
+
+<main>
+
+   <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+        <p class="eyebrow">Descubre productos creados para complementar tu belleza natural</p>
+          <h1>Glow your way</h1>
+          <p class="lead">Encuentra tus favoritos y crea una rutina que se sienta única como tú</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Comprar</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus productos')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> Hecho para tu rutina</p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/6.jpg" alt="Caja de regalo artesanal con velas aromáticas, flores secas y empaque cálido.">
+          <!-- <span class="tag tag-love">Skincare con ceramidas, ácido hialurónico, cafeína y ectoína </span> -->
+         <!-- <span class="tag tag-custom">Elaborados con ingredientes de alto rendimiento, seleccionados a conciencia y en concentraciones eficaces </span> -->
+        </div>
+      </div>
+    </section>  
+<!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Esenciales que amarás</p>
+          <h2>Descubre nuestros productos</h2>
+          <p class="lead">Encuentra lo que tu piel y tu rutina necesitan</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/glaze2.png" alt="Peptide glazing fluid">
+            <div class="product-body">
+              <span class="tag">Dewy gel serum </span>
+              <h3>Peptide glazing fluid</h3>
+              <p class="price">$551 MXN</p>
+              <p class="description">Suero gel hidratante que aporta brillo y suavidad a la piel</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/blush.png" alt="Pocket blush">
+            <div class="product-body">
+              <span class="tag">The natural flush </span>
+              <h3>Pocket blush</h3>
+              <p class="price">$430 MXN</p>
+              <p class="description">Rubor cremoso que aporta un toque de color natural y un glow fresco</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/tint.png" alt="Peptide lip tint">
+            <div class="product-body">
+              <span class="tag">The tinted lip layer </span>
+              <h3>Peptide lip tint</h3>
+              <p class="price">$345 MXN</p>
+              <p class="description">Tinte labial que aporta color natural y un acabado hidratante </p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/bronzer.png" alt="Pocket bronze">
+            <div class="product-body">
+              <span class="tag">Long wearing warmth </span>
+              <h3>Pocket bronze</h3>
+              <p class="price">$430 MXN</p>
+              <p class="description">Bronceador en crema que aporta un acabado natural y duradero</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/highlight.png" alt="Highlight milk">
+            <div class="product-body">
+              <span class="tag">Multipurpose luminizer</span>
+              <h3>Highlight milk</h3>
+              <p class="price">$499 MXN</p>
+              <p class="description">Luminizador multipropósito que aporta un brillo natural y duradero</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/shape.png" alt="Peptide lip shape">
+            <div class="product-body">
+              <span class="tag">The contouring lip shaper</span>
+              <h3>Peptide lip shape</h3>
+              <p class="price">$413 MXN</p>
+              <p class="description">Forma labial que aporta un contorno natural y duradero</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué elegir Rhode?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="flask-conical"></i></div>
+            <h3>Fórmulas esenciales</h3>
+            <p>Productos simples y efectivos para tu rutina diaria</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="mirror-round"></i></div>
+            <h3>Skincare + makeup </h3>
+            <p>Belleza que cuida tu piel mientras realza tu look</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="brush"></i></div>
+            <h3>Menos, pero mejor</h3>
+            <p>Una rutina sencilla con productos que realmente necesitas</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="flower"></i></div>
+            <h3>El ritual de todos los días</h3>
+            <p>Texturas suaves, acabados naturales y un toque de lujo</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Oferta de bienvenida</span>
+          <h2>Tu primer detalle de Rhode</h2>
+          <p>Obten 10% de descuento en tu primera compra y descubre tus favoritos</p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">Quiero mi descuento</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">RHODE10</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar código</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código RHODE10 en mi primer pedido.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Loved by you </p>
+          <h2>Lo que dicen quienes ya lo probaron</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/bonafont.jpg" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Ana B.</p>
+                    <p class="occasion">Peptide lip tint</p>
+                  </div>
+                </div>
+                <p class="quote">"Deja los labios hidratados y con un toque de color super bonito. Lo llevo a todas partes"</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/chulich.jpg">
+                  <div>
+                    <p class="name">Katya B.</p>
+                    <p class="occasion">Peptide glazing gluid</p>
+                  </div>
+                </div>
+                <p class="quote">"Mi piel se siente super hidratada y con un glow precioso. Ya no falta en mi rutina diaria"</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/bluey.jpg" alt="Retrato genérico de una mujer joven sonriente.">
+                  <div>
+                    <p class="name">Paulina P.</p>
+                    <p class="occasion">Pocket blush</p>
+                  </div>
+                </div>
+                <p class="quote">"El tono es precioso y se difumina super fácil. Se ha convertido en mi blush favorito"</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+ <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Tu piel, tu rutial</p>
+          <h2>Descubre los esenciales de rhode para tu rutina </h2>
+          <p class="lead">¿Tienes dudas? Contáctanos </p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero saber más sobre los productos.')">Escribir por WhatsApp</button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="instagram"></i> <a href="https://www.instagram.com/rhode?stkn=MXVsazhjcDRtbnM1bw==" target="_blank" rel="noopener noreferrer">@rhodeskin</a></li>
+            <li><i data-lucide="facebook"></i> <a href="https://www.facebook.com/share/1RksC7cYrv/?mibextid=wwXlfr" target="_blank" rel="noopener noreferrer">@rhode</a></li>
+            <li><i data-lucide="mail"></i> <a href="mailto:hello@rhodeskin.com">hello@rhodeskin.com</a></li>
+            <li><i data-lucide="clock-3"></i> Lun - Vie · 9:00 AM - 5:00 PM</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+     
+
+</main>
+<!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Rhode</p>
+      <p class="love">Todos los derechos reservados &copy; 2026 Rhode </p>
+      <nav class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los detalles personalizados de Dulce Detalle.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+    <!-- ================= MODALES DE PRODUCTO ================= -->
+
+  <!-- Peptide Glazing Fluid -->
+  <div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/3.png" alt="Peptide Glazing Fluid de Rhode">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-caja')">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-caja-title">Peptide Glazing Fluid</h2>
+        <p class="price">$551 MXN</p>
+        <p>
+          Suero gel hidratante que ayuda a dejar la piel suave, luminosa y con un acabado dewy.
+          Es ideal para complementar tu rutina diaria de skincare.
+        </p>
+
+        <h3>Ideal para:</h3>
+        <ul>
+          <li>Hidratar la piel</li>
+          <li>Aportar un glow natural</li>
+          <li>Dejar una sensación suave y fresca</li>
+        </ul>
+
+        <button type="button" class="btn primary"
+          onclick="openWhatsApp('Hola, quiero pedir el Peptide Glazing Fluid. ¿Me pueden dar más información?')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Pocket Blush -->
+  <div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/1.png" alt="Pocket Blush de Rhode">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-vela')">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-vela-title">Pocket Blush</h2>
+        <p class="price">$430 MXN</p>
+        <p>
+          Rubor cremoso que aporta un toque de color natural y un acabado fresco.
+          Su formato es práctico para llevarlo contigo a cualquier lugar.
+        </p>
+
+        <h3>Perfecto para:</h3>
+        <ul>
+          <li>Dar color natural a las mejillas</li>
+          <li>Crear un look fresco</li>
+          <li>Retocar tu maquillaje durante el día</li>
+        </ul>
+
+        <button type="button" class="btn primary"
+          onclick="openWhatsApp('Hola, quiero pedir el Pocket Blush. ¿Me pueden compartir los tonos disponibles?')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Peptide Lip Tint -->
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/2.png" alt="Peptide Lip Tint de Rhode">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-taza-title">Peptide Lip Tint</h2>
+        <p class="price">$345 MXN</p>
+        <p>
+          Tinte labial que combina un toque de color con una sensación hidratante,
+          dejando los labios con un acabado natural y cómodo.
+        </p>
+
+        <h3>Lo que ofrece:</h3>
+        <ul>
+          <li>Color natural</li>
+          <li>Acabado hidratante</li>
+          <li>Fácil de aplicar y llevar contigo</li>
+        </ul>
+
+        <button type="button" class="btn primary"
+          onclick="openWhatsApp('Hola, quiero pedir el Peptide Lip Tint. ¿Me pueden compartir los tonos disponibles?')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Pocket Bronze -->
+  <div id="modal-jardin" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jardin-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/4.png" alt="Pocket Bronze de Rhode">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-jardin')">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-jardin-title">Pocket Bronze</h2>
+        <p class="price">$430 MXN</p>
+        <p>
+          Bronceador en crema que aporta calidez al rostro con un acabado natural
+          y fácil de difuminar.
+        </p>
+
+        <h3>Ideal para:</h3>
+        <ul>
+          <li>Aportar calidez al rostro</li>
+          <li>Crear un efecto bronceado natural</li>
+          <li>Lograr un acabado uniforme y duradero</li>
+        </ul>
+
+        <button type="button" class="btn primary"
+          onclick="openWhatsApp('Hola, quiero pedir el Pocket Bronze. ¿Me pueden compartir los tonos disponibles?')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Highlight Milk -->
+  <div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/5.png" alt="Highlight Milk de Rhode">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-kit')">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-kit-title">Highlight Milk</h2>
+        <p class="price">$499 MXN</p>
+        <p>
+          Luminizador multipropósito que aporta un brillo natural y luminoso.
+          Puedes utilizarlo para darle un toque especial a diferentes zonas del rostro.
+        </p>
+
+        <h3>Puedes usarlo para:</h3>
+        <ul>
+          <li>Iluminar los pómulos</li>
+          <li>Aportar glow al rostro</li>
+          <li>Crear un look natural y luminoso</li>
+        </ul>
+
+        <button type="button" class="btn primary"
+          onclick="openWhatsApp('Hola, quiero pedir el Highlight Milk. ¿Me pueden compartir más información?')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Peptide Lip Shape -->
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/9.png" alt="Peptide Lip Shape de Rhode">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">Peptide Lip Shape</h2>
+        <p class="price">$413 MXN</p>
+        <p>
+          Producto diseñado para definir y dar forma a los labios,
+          creando un contorno natural que complementa cualquier look.
+        </p>
+
+        <h3>Perfecto para:</h3>
+        <ul>
+          <li>Definir el contorno de los labios</li>
+          <li>Crear una apariencia más definida</li>
+          <li>Complementar tu rutina de maquillaje</li>
+        </ul>
+
+        <button type="button" class="btn primary"
+          onclick="openWhatsApp('Hola, quiero pedir el Peptide Lip Shape. ¿Me pueden compartir más información?')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script src="js/script.JS"></script>
+</body>
+</html>
